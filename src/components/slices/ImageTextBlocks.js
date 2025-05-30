@@ -112,7 +112,7 @@ isPortraitMobile
 content={block?.content}
 className={cn(
 landscape &&
-'[&_.spacer]:medium:!mb-14 text-center medium:text-left pb-[30px] medium:pb-0 [&_p]:mx-auto',
+'[&_.spacer]:medium:!mb-14 text-center medium:text-left pb-[30px] medium:pb-0 [&_p]:mx-auto [&_p]:medium:mx-0',
 !landscape && 'text-center [&_p]:mx-auto',
 'h-fit [&_p]:max-w-lg'
 )}
