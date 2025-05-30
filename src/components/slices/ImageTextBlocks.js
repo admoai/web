@@ -52,14 +52,12 @@ landscape &&
 <div
 key={b}
 className={cn(
-// landscape &&
-// 'border-y-white border-y-2 border-opacity-0 betterhover:hover:border-opacity-100',
-'col-span-12 medium:col-span-6 relative',
-block?._type === 'textBlock' && 'row-start-1',
-!landscape ||
-(!landscapeTall &&
-block?._type === 'textBlock' &&
-'h-0 pt-[100%]')
+  'col-span-12 medium:col-span-6 relative',
+  block?._type === 'textBlock' && 'row-start-1',
+  !landscape &&
+    !landscapeTall &&
+    block?._type === 'textBlock' &&
+    'h-0 pt-[100%]'
 )}
 >
 {block?._type === 'mediaBlock' && (
