@@ -30,9 +30,9 @@ content={slide?.content}
 className={cn('text-current text-center mb-10 medium:mb-20 px-5')}
 />
 )}
-<div className='max-w-md min-w-[448px] mx-auto flex flex-col medium:flex-row justify-center relative gap-y-8 '>
+<div className='max-w-md md:min-w-[60%] mx-auto flex flex-col medium:flex-row justify-center relative gap-y-8 '>
 {slide?.mediaOverlay && (
-<div className='max-w-md min-w-[448px]'>
+<div className='max-w-md md:min-w-[60%]'>
 <Media
 originalDimensions
 media={slide?.mediaOverlay}
@@ -42,7 +42,7 @@ inlineVideo
 </div>
 )}
 {slide?.popupCards && (
-<div className='relative medium:absolute inset-0 w-full'>
+<div className='relative medium:absolute inset-0 w-full md:max-w-[60%] mx-auto'>
 {slide?.popupCards?.map((card, k) => (
 <div
 key={k}
