@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .h1 {
+    @apply text-fluid-h1 font-medium leading-[0.9] font-sans tracking-tight;
+  }
+  .h2 {
+    @apply text-fluid-h2 font-medium font-sans leading-[0.9] tracking-tight;
+  }
+  .h3 {
+    @apply text-fluid-h3 font-medium font-sans leading-[0.9] tracking-tight;
+  }
+  .h4 {
+    @apply text-fluid-h4 font-medium font-sans leading-[0.9];
+  }
+  .h5 {
+    @apply text-fluid-h5 font-normal font-sans;
+  }
+  .h6 {
+    @apply text-fluid-h6 font-normal font-sans;
+  }
+  .grid-layout {
+    @apply grid grid-cols-12;
+  }
+  .top-gap {
+    @apply pt-20;
+  }
+  .rte h2 {
+    @apply md:whitespace-pre-wrap;
+  }
+  .rte h2 br, .rte p br {
+    @apply hidden md:block;
+  }
+  /* MENU */
+  .is-light .menu-button {
+    @apply before:bg-black bg-black;
+  }
+  .is-dark .menu-button {
+    @apply before:bg-white bg-white;
+  }
+  .is-light .change-color-graphic path {
+    @apply fill-black;
+  }
+  .is-dark .color-change-section {
+    @apply bg-grey;
+  }
+  .is-dark .color-change-section.dark {
+    @apply !bg-darkGrey;
+  }
+  .is-light .color-change-section {
+    @apply bg-bone;
+  }
+  .section {
+    @apply px-2.5 mb-2.5;
+  }
+  .section-inner {
+    @apply py-[30px] medium:py-[60px] w-full h-full rounded-md overflow-hidden;
+  }
+  .anchor-button {
+    @apply mx-auto w-fit text-bone bg-black flex gap-x-2 items-center px-4 h-[34px] rounded-full;
+  }
+   .gradient-bg-dark {
+    @apply bg-gradient-to-r from-[#5B21D7] to-[#57ADCC] text-black;
+  }
+  .gradient-bg-light {
+    @apply bg-gradient-to-r from-[#E29CEF] to-[#5EACCE] text-black;
+  }
+  .is-dark .gradient-bg {
+    @apply bg-gradient-to-r from-[#5B21D7] to-[#57ADCC] text-black;
+  }
+  .is-light .gradient-bg {
+    @apply bg-gradient-to-r from-[#E29CEF] to-[#5EACCE] text-black;
+  }
+  .is-light .gradient-bg.hover {
+    @apply transition-all easing duration betterhover:hover:text-white betterhover:hover:from-[#000000] betterhover:hover:to-[#000000];
+  }
+  .is-dark .gradient-bg.hover {
+    @apply transition-all easing duration betterhover:hover:text-black betterhover:hover:from-[#EBE9DC] betterhover:hover:to-[#EBE9DC];
+  }
+  
+  .is-light .color-change-border {
+    @apply border-black;
+  }
+  .is-dark .color-change-border {
+    @apply border-white;
+  }
+  
+  .is-light .nav-button {
+    @apply bg-bone bg-opacity-0;
+  }
+  .is-dark .nav-button {
+    @apply bg-black;
+  }
+  .is-light .body-large {
+    @apply text-fluid-body-small medium:text-fluid-h4 medium:font-medium leading-[1.1];
+  }
+  .is-dark .body-large {
+    @apply text-fluid-h4 leading-[1.1];
+  }
+  .uppercase {
+    @apply !font-heading !leading-[0.9] tracking-tight;
+  }
+  .rte.uppercase h2 {
+    @apply !font-heading;
+  }
+  b, strong {
+    @apply !font-medium;
+  }
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-preserve-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+    .flip-card-inner {
+      transform: rotateY(0deg);
+    }
+    .flip-parent:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    .is-light input::placeholder, .is-light textarea::placeholder {
+      @apply opacity-50 text-black;
+    }
+    .is-dark input::placeholder, .is-dark textarea::placeholder {
+      @apply opacity-50 text-white;
+    }
+}
+
+@layer base {
+  h1 {
+    @apply h1;
+  }
+  h2 {
+    @apply h2;
+  }
+  h3 {
+    @apply h3;
+  }
+  h4 {
+    @apply h4;
+  }
+  h5 {
+    @apply h5;
+  }
+  h6 {
+    @apply h6;
+  }
+  p,
+  ol,
+  ul,
+  a,
+  button {
+    @apply text-fluid-body font-sans;
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+.duration {
+  transition-duration: 0.5s;
+}
+
+.easing {
+  transition-timing-function: cubic-bezier(0.1, 0, 0, 1);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* .swiper-pagination-bullet {
+  background-color: white !important;
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 0.6 !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+} */
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.flip-card-transform {
+  transform: rotateY(180deg);
+}
+.flip-card-transform-hover:hover {
+  transform: rotateY(180deg);
+}
+
+
+.box-shadow {
+  box-shadow: 20px 20px 0px 0px #000;
+}
+@media (max-width: 768px) {
+  /* Styles here apply to screens 768px and below */
+  .box-shadow {
+    box-shadow: 11px 11px 0px 0px #000;
+  }
+}
+
+.box-shadow-left {
+  box-shadow: -20px 20px 0px 0px #000;
+}
+@media (max-width: 768px) {
+  /* Styles here apply to screens 768px and below */
+  .box-shadow-left {
+    box-shadow: -11px 11px 0px 0px #000;
+  }
+}
+.box-shadow-small {
+  box-shadow: 12px 12px 0px 0px #000;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 2px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
